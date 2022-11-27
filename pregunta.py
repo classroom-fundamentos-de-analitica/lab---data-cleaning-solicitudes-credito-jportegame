@@ -13,7 +13,7 @@ from datetime import datetime
 
 def clean_data():
 
-    df = pd.read_csv("solicitudes_credito.csv", sep=";")
+    df = pd.read_csv("solicitudes_credito.csv", sep=";", index_col = 0)
 
     df.dropna(axis = 0, inplace = True)
 
@@ -31,3 +31,5 @@ def clean_data():
     return df
 
 clean_data()
+
+#[6617, 3589]
